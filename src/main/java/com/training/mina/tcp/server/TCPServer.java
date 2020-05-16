@@ -18,7 +18,7 @@ public class TCPServer {
         // acceptor.getFilterChain().addLast("logger", new LoggingFilter());
         acceptor.getFilterChain().addLast("codec", new ProtocolCodecFilter(
                 new TextLineCodecFactory(Charset.forName("UTF-8"))));
-        acceptor.setHandler(new ServerReadWriteLockHandler());
+        acceptor.setHandler(new ServerSharedLockHandler());
         acceptor.getSessionConfig().setReadBufferSize(2048);
         acceptor.getSessionConfig().setIdleTime( IdleStatus.BOTH_IDLE, 100);
         try {
