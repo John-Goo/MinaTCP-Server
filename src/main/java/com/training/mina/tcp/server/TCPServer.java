@@ -9,7 +9,7 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.charset.Charset;
-
+//com.training.mina.tcp.server.TCPServer
 public class TCPServer {
 
     final static int _TCP_PORT = 60000;
